@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominic Bodkin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sky"></div>
+    <div class="floor"></div>
+    <div id="container">
+        <img id="player" src="assets/spriteIdle.gif" alt="Player">
+        <img id="exitNpc" class="npc" src="assets/exitSpriteInactive.gif" alt="Exit NPC" style="right: 400px;">
+        <img id="aboutNpc" class="npc" src="assets/aboutSpriteInactive.gif" alt="About NPC" style="right: 100px;">
+    </div>
+
+    <div id="dialogueMenu" class="menu">
+        <h1>Slime:</h1>
+        <div id="dialogueText"> </div>
+        <button id="nextButton">[Nod]</button>
+        <button id="closeButton">[Leave]</button>
+    </div>
+
+    <div id="aboutMenu" class="menu">
+        <div class="about-content">
+            <h1>Having Fun?</h1>
+            <p>My name is <b>Dominic Bodkin</b>, and I'm a Rising Senior with an aspiration in Programming/Web Design! I have many passions and hobbies. Mostly consisting of Art and Animation, along with Game Design! (Sprites are done by me)</p><br>
+            <img class="profile" src="assets/me.jpg" alt="Profile Picture">
+            <p>Interested to learn more? Press the 'Learn More!' button to continue! (This will take you to a new page)</p>
+        </div>
+        <button id="learnMoreButton">Learn More!</button>
+        <button id="backButton">Back</button>
+    </div>
+
+    <div id="controlMenu" class="menu control">
+        <h1>Controls:</h1>
+        <p>W - Jump</p>
+        <p>A/D - Move</p>
+        <p>S - Attack (W.I.P)</p>
+        <p>Q - Dash</p>
+        <p>E - Interact</p>
+        <p>R - Toggle Controls</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

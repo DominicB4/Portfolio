@@ -1,0 +1,192 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: linear-gradient(to top, rgba(11, 145, 255, 1), rgba(12, 176, 252, 1), rgba(8, 163, 253, 1));
+    color: antiquewhite;
+    cursor: none; /* Hide the default cursor */
+}
+
+h1 {
+    font-size: 500%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+    font-size: 150%;
+}
+h1, h2, h3 {
+    color: antiquewhite;
+}
+
+p {
+    color: antiquewhite;
+    font-size: 110%;
+    font-weight:lighter;
+    line-height: 150%;
+}
+
+nav {
+    background: rgba(12, 176, 252, 0.8);
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: hsla(0, 0%, 100%, 1);
+    background: linear-gradient(rgb(111, 193, 255), rgba(42, 177, 255, 0.8));
+    border-radius: 35%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    margin: 10px;
+    width: 8vw;
+    height: 8vh;
+    border: 1px solid linear-gradient(rgb(172, 219, 255), rgba(90, 195, 255, 0.8));
+    padding: 0.5rem;
+}
+
+nav a:hover {
+    background: linear-gradient(rgb(80, 147, 202), rgba(39, 132, 179, 0.918), rgba(30, 118, 165, 0.8));
+}
+
+.descrip {
+    text-decoration: none;
+    color: hsla(0, 0%, 100%, 1);
+    background: linear-gradient(rgb(111, 193, 255), rgba(42, 177, 255, 0.8));
+    border-radius: 0.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    border: 1px solid linear-gradient(rgb(172, 219, 255), rgba(90, 195, 255, 0.8));
+    padding: 0.5rem;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.profile h1 {
+    display: inline-block;
+    margin-left: 20px;
+    position: relative;
+    animation: spin 6s linear infinite, zoomInOut 6s ease-in-out infinite, afterimage 1.5s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.profile img {
+    margin-right: 20px;
+}
+
+.content {
+    display: none;
+    padding: 20px;
+    animation: slideIn 1.5s ease-out;
+}
+
+.description-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.description-container .descrip {
+    flex: 1;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.description-container .image {
+    width: 200px;
+    height: auto;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes zoomInOut {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2); 
+    }
+}
+
+@keyframes afterimage {
+    0%, 100% {
+        text-shadow: none; 
+    }
+    50% {
+        text-shadow: 
+            0px 4px 8px rgba(80, 249, 255, 0.6),
+            8px 8px 16px rgba(104, 255, 255, 0.4),
+            12px 12px 24px rgba(136, 247, 255, 0.2);
+    }
+}
+
+
+
+.back-to-game {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(12, 176, 252, 0.8);
+    color: antiquewhite;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.back-to-game:hover {
+    background: linear-gradient(rgb(80, 147, 202), rgba(39, 132, 179, 0.918), rgba(30, 118, 165, 0.8));
+}
+
+
+.cursor-trail {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: hsla(0, 0%, 100%, 0.9);
+    border-radius: 50%;
+    pointer-events: all;
+    transform: translate(-50%, 50%);
+    animation: fade 1.5s ease-out forwards;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+        transform: translate(-10%, -10%) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-10%, -10%) scale(0);
+    }
+}
